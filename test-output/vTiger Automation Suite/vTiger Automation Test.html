@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>TestNG:  vTiger Automation Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>vTiger Automation Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 03 09:54:53 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>185 seconds (185611 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, patel, vUserIvPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem1, Patel1</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.validateLoginPageTitle()'><b>validateLoginPageTitle</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
+<td></td>
+<td>0</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithValidCredentials()'><b>testLoginWithValidCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
+<td></td>
+<td>6</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem3, Patel3</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem4, Patel4</td>
+<td></td>
+<td>15</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, admin, vUserVPass</td>
+<td></td>
+<td>5</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: aseem, Patel, ivUserIvPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem2, Patel2</td>
+<td></td>
+<td>17</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContactsWithLeadSource()'><b>testCreateNewContactsWithLeadSource</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem2, Patel2, Existing Customer</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContactsWithLeadSource()'><b>testCreateNewContactsWithLeadSource</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem3, Patel3, Self Generated</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContactsWithLeadSource()'><b>testCreateNewContactsWithLeadSource</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem1, Patel1, Cold Call</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContactsWithLeadSource()'><b>testCreateNewContactsWithLeadSource</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem4, Patel4, Employee</td>
+<td></td>
+<td>16</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: Aseem, admin, ivUserVPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.validateLoginPageTitlLogo()'><b>validateLoginPageTitlLogo</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
+<td></td>
+<td>0</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,130 @@
+[INFO ] 03-04-2024 09:54:56 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:54:56 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:54:56 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:54:59 [main] LoggerLoad - ****** After Login Home Page Loaded Successfully ****** 
+[INFO ] 03-04-2024 09:55:02 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:55:02 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:02 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:02 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:02 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:04 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:04 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:04 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 03-04-2024 09:55:06 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 03-04-2024 09:55:06 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:06 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:06 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:06 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:08 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:08 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:08 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 03-04-2024 09:55:10 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 03-04-2024 09:55:10 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:10 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:10 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:10 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:12 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:12 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:12 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 03-04-2024 09:55:14 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 03-04-2024 09:55:14 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:14 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:14 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:14 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:16 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:16 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:16 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:55:16 [main] LoggerLoad - ****** login Page Title matched: vtiger CRM 5 - Commercial Open Source CRM ******
+[INFO ] 03-04-2024 09:55:17 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:17 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:17 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:17 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - ****** login Page Logo Visible: true****** 
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:19 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:21 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:21 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:21 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:55:24 [main] LoggerLoad - ****** After Login Home Page Loaded Successfully ****** 
+[INFO ] 03-04-2024 09:55:28 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:55:28 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:28 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:28 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:28 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:30 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:30 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:30 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:55:44 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:55:46 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:55:47 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:55:47 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:55:47 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:47 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:55:49 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:55:49 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:55:49 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:56:03 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:56:06 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:56:06 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:56:06 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:56:06 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:06 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:56:08 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:08 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:56:08 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:56:22 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:56:25 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:56:25 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:56:25 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:56:25 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:25 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:56:27 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:27 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:56:27 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:56:40 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:56:43 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:56:43 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:56:43 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:56:43 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:43 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:56:45 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:56:45 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:56:45 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:56:59 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:57:02 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:57:02 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:57:02 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:57:02 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:02 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:57:04 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:04 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:57:04 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:57:18 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:57:21 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:57:21 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:57:21 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:57:21 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:21 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:57:23 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:23 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:57:23 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:57:37 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:57:39 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:57:39 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:57:39 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:57:39 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:39 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 03-04-2024 09:57:42 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:42 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 03-04-2024 09:57:42 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 03-04-2024 09:57:55 [main] LoggerLoad - ****** Contacts Created Successfully ******
+[INFO ] 03-04-2024 09:57:58 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 03-04-2024 09:57:58 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 03-04-2024 09:57:58 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 03-04-2024 09:57:58 [main] LoggerLoad - =================================================================================================
+[INFO ] 03-04-2024 09:57:58 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

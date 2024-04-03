@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="vTiger Automation Suite">
+<!--	<listeners>
+		<listener class-name="genericUtilities.ListenerImplementation"></listener>
+	</listeners>
+	or add @Listeners(genericUtilities.ListenerImplementation.class)in each Test Class File
+	-->
+  <test name="vTiger Automation Test">
+    <classes>
+     <class name="Qspider.Tests.TC_01_LoginVtigerTest"/>
+     <class name="Qspider.Tests.TC_02_CreateContactsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
