@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Qspider.Tests.TC_01_LoginVtigerTest">
+      <class name="Practice.Practice1">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="testLoginWithAllCombinationOfCredentials" invocation-numbers="0"/>
-          <include name="quitBrowser"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->
+      </class> <!-- Practice.Practice1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -92,8 +92,8 @@
 				</plugins>
 			</build>
 		</profile>
-		
-				<profile>
+
+		<profile>
 			<id>RegressionTest</id>
 			<build>
 				<plugins>
