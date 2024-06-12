@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	
+	// This is the example of Encapsulation in Java
 	WebDriver driver;
 	public final String loginWarningMessage = "You must specify a valid username and password.";
 	// rule-01: Create separate page for each page in the Web Application

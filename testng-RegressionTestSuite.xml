@@ -6,7 +6,7 @@
 			<include name="RegressionTestSuite"></include>
 		</run>
 	</groups>
-  <test thread-count="5" name="Test">
+  <test thread-count="2" name="Test">
 	  <parameter name="BrowserName" value="Chrome"></parameter>
     <classes>
       <class name="Qspider.Tests.TC_01_LoginVtigerTest"/>
