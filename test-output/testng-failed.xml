@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test(failed)">
+    <parameter name="BrowserName" value="Chrome"/>
     <classes>
-      <class name="Practice.Practice1">
+      <class name="Qspider.Tests.TC_02_CreateContactsTest">
         <methods>
-          <include name="test"/>
+          <include name="testCreateNewContacts" invocation-numbers="0 1"/>
+          <include name="launchBrowser"/>
+          <include name="quitBrowser"/>
         </methods>
-      </class> <!-- Practice.Practice1 -->
+      </class> <!-- Qspider.Tests.TC_02_CreateContactsTest -->
+      <class name="Qspider.Tests.TC_01_LoginVtigerTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="testLoginWithAllCombinationOfCredentials" invocation-numbers="0"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

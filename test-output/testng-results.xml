@@ -1,17 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-08T10:32:15 IST" name="Default suite" finished-at="2024-06-08T10:32:22 IST" duration-ms="7025">
+  <suite started-at="2024-06-14T21:11:46 IST" name="Default suite" finished-at="2024-06-14T21:12:59 IST" duration-ms="72986">
     <groups>
+      <group name="RegressionTestSuite">
+        <method signature="TC_02_CreateContactsTest.testCreateNewContacts(java.lang.String,java.lang.String)[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" name="testCreateNewContacts" class="Qspider.Tests.TC_02_CreateContactsTest"/>
+      </group> <!-- RegressionTestSuite -->
     </groups>
-    <test started-at="2024-06-08T10:32:15 IST" name="Default test" finished-at="2024-06-08T10:32:22 IST" duration-ms="7025">
-      <class name="Practice.Practice1">
-        <test-method signature="test()[pri:0, instance:Practice.Practice1@32eff876]" started-at="2024-06-08T10:32:15 IST" name="test" finished-at="2024-06-08T10:32:22 IST" duration-ms="7003" status="PASS">
+    <test started-at="2024-06-14T21:11:46 IST" name="Default test" finished-at="2024-06-14T21:12:59 IST" duration-ms="72986">
+      <class name="Qspider.Tests.TC_02_CreateContactsTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:11:47 IST" name="launchBrowser" finished-at="2024-06-14T21:11:49 IST" duration-ms="2116" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- Practice.Practice1 -->
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testCreateNewContacts(java.lang.String,java.lang.String)[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:11:49 IST" name="testCreateNewContacts" data-provider="excelCreatenewContacts" finished-at="2024-06-14T21:12:05 IST" duration-ms="16050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aseem1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patel1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewContacts -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:05 IST" name="quitBrowser" finished-at="2024-06-14T21:12:05 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:05 IST" name="launchBrowser" finished-at="2024-06-14T21:12:07 IST" duration-ms="1775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testCreateNewContacts(java.lang.String,java.lang.String)[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:07 IST" name="testCreateNewContacts" data-provider="excelCreatenewContacts" finished-at="2024-06-14T21:12:23 IST" duration-ms="15449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aseem2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patel2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewContacts -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:23 IST" name="quitBrowser" finished-at="2024-06-14T21:12:23 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:23 IST" name="launchBrowser" finished-at="2024-06-14T21:12:24 IST" duration-ms="1742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testCreateNewContacts(java.lang.String,java.lang.String)[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:24 IST" name="testCreateNewContacts" data-provider="excelCreatenewContacts" finished-at="2024-06-14T21:12:41 IST" duration-ms="16291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aseem3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patel3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewContacts -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:41 IST" name="quitBrowser" finished-at="2024-06-14T21:12:41 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:41 IST" name="launchBrowser" finished-at="2024-06-14T21:12:43 IST" duration-ms="1766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testCreateNewContacts(java.lang.String,java.lang.String)[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:43 IST" name="testCreateNewContacts" data-provider="excelCreatenewContacts" finished-at="2024-06-14T21:12:59 IST" duration-ms="16299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aseem4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patel4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewContacts -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_02_CreateContactsTest@6c64cb25]" started-at="2024-06-14T21:12:59 IST" name="quitBrowser" finished-at="2024-06-14T21:12:59 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- Qspider.Tests.TC_02_CreateContactsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 03 09:50:19 IST 2024</td>
+<td>Started on:</td><td>Fri Jun 14 12:01:56 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>79 seconds (79304 ms)</td>
+<tr><td>Total time:</td><td>53 seconds (53124 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,6 +68,117 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.quitBrowser()'><b>quitBrowser</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$4.send(JdkHttpClient.java:298)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$4.close(JdkHttpClient.java:317)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:426)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at genericUtilities.BaseClass.quitBrowser(BaseClass.java:88)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.MessageEncoder.encodeClose(MessageEncoder.java:330)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask$1.onClose(TransportImpl.java:416)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask$1.onClose(TransportImpl.java:361)
+	at java.net.http/jdk.internal.net.http.websocket.MessageQueue.peek(MessageQueue.java:266)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask.run(TransportImpl.java:549)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$TryEndDeferredCompleter.complete(SequentialScheduler.java:347)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:151)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl.sendClose(TransportImpl.java:271)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose0(WebSocketImpl.java:345)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendCloseSilently(WebSocketImpl.java:660)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.lambda$processClose$0(WebSocketImpl.java:549)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenCompleteStage(CompletableFuture.java:887)
+	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:2325)
+	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:144)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.processClose(WebSocketImpl.java:544)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.run(WebSocketImpl.java:459)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	... 3 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace488025419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace488025419'><pre>org.openqa.selenium.WebDriverException: java.io.IOException: Output closed
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: ChromiumDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$4.send(JdkHttpClient.java:298)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient$4.close(JdkHttpClient.java:317)
+	at org.openqa.selenium.devtools.Connection.close(Connection.java:224)
+	at org.openqa.selenium.devtools.DevTools.close(DevTools.java:60)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:426)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:432)
+	at genericUtilities.BaseClass.quitBrowser(BaseClass.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.io.IOException: Output closed
+	at java.net.http/jdk.internal.net.http.websocket.MessageEncoder.encodeClose(MessageEncoder.java:330)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask$1.onClose(TransportImpl.java:416)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask$1.onClose(TransportImpl.java:361)
+	at java.net.http/jdk.internal.net.http.websocket.MessageQueue.peek(MessageQueue.java:266)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl$SendTask.run(TransportImpl.java:549)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$TryEndDeferredCompleter.complete(SequentialScheduler.java:347)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:151)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.websocket.TransportImpl.sendClose(TransportImpl.java:271)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendClose0(WebSocketImpl.java:345)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl.sendCloseSilently(WebSocketImpl.java:660)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.lambda$processClose$0(WebSocketImpl.java:549)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenCompleteStage(CompletableFuture.java:887)
+	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:2325)
+	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:144)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.processClose(WebSocketImpl.java:544)
+	at java.net.http/jdk.internal.net.http.websocket.WebSocketImpl$ReceiveTask.run(WebSocketImpl.java:459)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -75,42 +186,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem2, Patel2</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=123.0.6312.86)
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, admin, vUserVPass</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [972b72c8fef323a27a977bf02f5dea6b, clickElement {id=f.B4A98D34A759A08D0C9D51DE516A5763.d.07ACBB8DEFE49FAB03C8E3826C154EFE.e.578}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51471/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (972b72c8fef323a27a977bf02f5dea6b)] -&gt; xpath: //a[text()=&apos;Sign Out&apos;]]
-Session ID: 972b72c8fef323a27a977bf02f5dea6b
+Command: [2d4504d21482942fe0722f6d249b710c, clickElement {id=f.61F93467FBC0C4C48E2C7D508FFB544B.d.923F1A868DA8AABDB3BED55AED4F29FC.e.9}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59580}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59580/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2d4504d21482942fe0722f6d249b710c)] -&gt; xpath: //input[@id=&apos;submitButton&apos;]]
+Session ID: 2d4504d21482942fe0722f6d249b710c
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at objectRepository.HomePage.clickOnLogOut(HomePage.java:115)
-	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:35)
+	at objectRepository.LoginPage.loginOperation(LoginPage.java:82)
+	at Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials(TC_01_LoginVtigerTest.java:21)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1156929235", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1156929235'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=123.0.6312.86)
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1305161186", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1305161186'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [972b72c8fef323a27a977bf02f5dea6b, clickElement {id=f.B4A98D34A759A08D0C9D51DE516A5763.d.07ACBB8DEFE49FAB03C8E3826C154EFE.e.578}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51471/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (972b72c8fef323a27a977bf02f5dea6b)] -&gt; xpath: //a[text()=&apos;Sign Out&apos;]]
-Session ID: 972b72c8fef323a27a977bf02f5dea6b
+Command: [2d4504d21482942fe0722f6d249b710c, clickElement {id=f.61F93467FBC0C4C48E2C7D508FFB544B.d.923F1A868DA8AABDB3BED55AED4F29FC.e.9}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59580}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59580/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2d4504d21482942fe0722f6d249b710c)] -&gt; xpath: //input[@id=&apos;submitButton&apos;]]
+Session ID: 2d4504d21482942fe0722f6d249b710c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -122,7 +233,7 @@ Session ID: 972b72c8fef323a27a977bf02f5dea6b
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -131,8 +242,8 @@ Session ID: 972b72c8fef323a27a977bf02f5dea6b
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at objectRepository.HomePage.clickOnLogOut(HomePage.java:115)
-	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:35)
+	at objectRepository.LoginPage.loginOperation(LoginPage.java:82)
+	at Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials(TC_01_LoginVtigerTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,47 +260,45 @@ Session ID: 972b72c8fef323a27a977bf02f5dea6b
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 </pre></div></td>
-<td>29</td>
-<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<td>10</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
 <tr>
 <td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem1, Patel1</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=123.0.6312.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3c5e859e86460783d222ff9f6c336161, clickElement {id=f.0D768BC2F6DF3E0BEECEFFF3FE8F3A93.d.25DCA83547EDDCBA0C2A3B2489146102.e.42}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51435/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3c5e859e86460783d222ff9f6c336161)] -&gt; xpath: //input[@id=&apos;submitButton&apos;]]
-Session ID: 3c5e859e86460783d222ff9f6c336161
+Command: [dea202bcee2fb23360e6b37ec0649c4d, clickElement {id=f.8CA27236A8FDDB73F21061BF16D3190E.d.AA9FBAFC5016740F9530178F152D2204.e.81}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59581}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59581/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dea202bcee2fb23360e6b37ec0649c4d)] -&gt; xpath: //a[@href=&apos;index.php?module=Contacts&amp;action=index&apos;]]
+Session ID: dea202bcee2fb23360e6b37ec0649c4d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at objectRepository.LoginPage.loginOperation(LoginPage.java:82)
-	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:26)
+	at objectRepository.HomePage.clickOnContacts(HomePage.java:103)
+	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:28)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1425249548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1425249548'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=123.0.6312.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace756052957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace756052957'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3c5e859e86460783d222ff9f6c336161, clickElement {id=f.0D768BC2F6DF3E0BEECEFFF3FE8F3A93.d.25DCA83547EDDCBA0C2A3B2489146102.e.42}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51435/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3c5e859e86460783d222ff9f6c336161)] -&gt; xpath: //input[@id=&apos;submitButton&apos;]]
-Session ID: 3c5e859e86460783d222ff9f6c336161
+Command: [dea202bcee2fb23360e6b37ec0649c4d, clickElement {id=f.8CA27236A8FDDB73F21061BF16D3190E.d.AA9FBAFC5016740F9530178F152D2204.e.81}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\aseem\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59581}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59581/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dea202bcee2fb23360e6b37ec0649c4d)] -&gt; xpath: //a[@href=&apos;index.php?module=Contacts&amp;action=index&apos;]]
+Session ID: dea202bcee2fb23360e6b37ec0649c4d
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -201,7 +310,7 @@ Session ID: 3c5e859e86460783d222ff9f6c336161
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -210,8 +319,8 @@ Session ID: 3c5e859e86460783d222ff9f6c336161
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at objectRepository.LoginPage.loginOperation(LoginPage.java:82)
-	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:26)
+	at objectRepository.HomePage.clickOnContacts(HomePage.java:103)
+	at Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts(TC_02_CreateContactsTest.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -228,8 +337,8 @@ Session ID: 3c5e859e86460783d222ff9f6c336161
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 </pre></div></td>
-<td>1</td>
-<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<td>21</td>
+<td>Qspider.Tests.TC_02_CreateContactsTest@31304f14</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -239,50 +348,35 @@ Session ID: 3c5e859e86460783d222ff9f6c336161
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: Aseem, admin, ivUserVPass</td>
-<td></td>
-<td>1</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
-<tr>
 <td title='Qspider.Tests.TC_01_LoginVtigerTest.validateLoginPageTitle()'><b>validateLoginPageTitle</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
 <td></td>
 <td>0</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
-<tr>
-<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, patel, vUserIvPass</td>
-<td></td>
-<td>1</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
-<tr>
-<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, admin, vUserVPass</td>
-<td></td>
-<td>8</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
-<tr>
-<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: aseem, Patel, ivUserIvPass</td>
-<td></td>
-<td>1</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
 <tr>
 <td title='Qspider.Tests.TC_01_LoginVtigerTest.validateLoginPageTitlLogo()'><b>validateLoginPageTitlLogo</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
 <td></td>
 <td>0</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: Aseem, admin, ivUserVPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: admin, patel, vUserIvPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
+<tr>
+<td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials()'><b>testLoginWithAllCombinationOfCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest<br>Parameters: aseem, Patel, ivUserIvPass</td>
+<td></td>
+<td>1</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
 <tr>
 <td title='Qspider.Tests.TC_01_LoginVtigerTest.testLoginWithValidCredentials()'><b>testLoginWithValidCredentials</b><br>Test class: Qspider.Tests.TC_01_LoginVtigerTest</td>
 <td></td>
-<td>7</td>
-<td>Qspider.Tests.TC_01_LoginVtigerTest@222545dc</td></tr>
-<tr>
-<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem3, Patel3</td>
-<td></td>
-<td>17</td>
-<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
-<tr>
-<td title='Qspider.Tests.TC_02_CreateContactsTest.testCreateNewContacts()'><b>testCreateNewContacts</b><br>Test class: Qspider.Tests.TC_02_CreateContactsTest<br>Parameters: Aseem4, Patel4</td>
-<td></td>
-<td>16</td>
-<td>Qspider.Tests.TC_02_CreateContactsTest@4f83df68</td></tr>
+<td>5</td>
+<td>Qspider.Tests.TC_01_LoginVtigerTest@7f3b84b8</td></tr>
 </table><p>
 </body>
 </html>

@@ -54,6 +54,9 @@ public class TC_02_CreateContactsTest extends BaseClass {
 		LoggerLoad.info("****** LogOut the Application Successfully ******");
 	}
 	
+	
+	
+	
 	@DataProvider(name = "excelCreatenewContacts")
 	public Object[][] dataGeneratorCreateContacts() throws Throwable
 	{
@@ -62,6 +65,9 @@ public class TC_02_CreateContactsTest extends BaseClass {
 		Object[][] userCredentials = efUtility.readExcelData("ContactsDetails");
 		return userCredentials;
 	}
+	
+	
+	
 	
 	@DataProvider(name = "excelCreateNewContactsWithLeadSource")
 	public Object[][] dataGeneratorCreateContactsWithLeadSource() throws Throwable {

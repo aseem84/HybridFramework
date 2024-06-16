@@ -49,9 +49,9 @@ public class CreateNewContactsPage extends SeleniumUtility {
 		return dropDownLeadSource;
 	}
 
-	public ContactInfoPage enterContacts(String fName, String lName) throws InterruptedException
+	public ContactInfoPage enterContacts(String fName,String lName) throws InterruptedException
 	{
-		getfNameBox().sendKeys(fName);
+		getfNameBox().sendKeys(fName); 
 		getlNamebox().sendKeys(lName);
 		getSaveBtn().click();
 		Thread.sleep(1000);

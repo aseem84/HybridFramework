@@ -6,7 +6,7 @@
 			<include name="SmokeTestSuite"></include>
 		</run>
 	</groups>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test" parallel="methods">
 	  <parameter name="BrowserName" value="edge"></parameter>
     <classes>
       <class name="Qspider.Tests.TC_01_LoginVtigerTest"/>

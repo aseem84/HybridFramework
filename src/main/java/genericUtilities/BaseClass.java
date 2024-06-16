@@ -35,7 +35,7 @@ public class BaseClass {
 	
 	@BeforeMethod(alwaysRun = true) // or @BeforeMethod(groups ="SmokeTestSuite")
 	//@Parameters(value = "BrowserName") 
-	//uncomment the @Parameters and pass the parameter in lauchBrowser method as String BroswerName
+	//uncomment the @Parameters and pass the parameter in lauchBrowser method as String String browserName
 	public void launchBrowser() throws Throwable {
 		String browserName = pfUtility.getBrowser();
 		String url = pfUtility.getURL();
