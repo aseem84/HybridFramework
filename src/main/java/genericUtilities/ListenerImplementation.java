@@ -1,12 +1,11 @@
 package genericUtilities;
 
-import java.awt.Desktop;
-import java.io.File;
 import java.io.IOException;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,7 +15,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ListenerImplementation implements ITestListener{
+public class ListenerImplementation implements ITestListener{ // extends TestListenerAdapter Both are same
 	JavaUtility jUtility = new JavaUtility();
 	ExtentSparkReporter reporter;
 	ExtentReports reports;
