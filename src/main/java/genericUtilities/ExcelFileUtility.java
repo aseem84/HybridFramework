@@ -6,12 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-
-
 
 public class ExcelFileUtility {
 	public final String fileName = ".\\src\\test\\resources\\TestData.xlsx";
@@ -38,36 +36,53 @@ public class ExcelFileUtility {
 
 		int totalRows = sh.getLastRowNum() + 1;
 		int totalCells = sh.getRow(0).getLastCellNum();
-		data = new String[totalRows - 1][totalCells];
+		data = new String[totalRows - 1][totalCells]; // for method 2 this statement is not necessary
 
-		for (int i = 1; i < totalRows; i++) {
-			for (int j = 0; j < totalCells; j++) {
-				Row row = sh.getRow(i);
-				if (row == null) {
-					continue;
-				} else {
-					data[i - 1][j] = row.getCell(j).getStringCellValue();
-				}
+		// Method-01 START
+//		for (int i = 1; i < totalRows; i++) {
+//            Row row = sh.getRow(i);
+//            if (row == null) {
+//                continue;
+//            }
+//            for (int j = 0; j < totalCells; j++) {
+//            	Cell cell = row.getCell(j);
+//                data[i - 1][j] = cell.getStringCellValue();
+//            }
+//		}
+//		wb.close();
+//		List<String[]> resultList1 = new ArrayList<>();
+//		for (String[] row : data) { 
+//			if (Arrays.stream(row).anyMatch(item -> item != null)) 
+//			{ 
+//				resultList1.add(row); 
+//			} 
+//		}
+//		String[][] result1 = resultList1.toArray(new String[0][]);
+//		return result1;
+		// ************************************************************************
 
-			}
-		}
-		wb.close();
-		// Filter out rows that contain only null values using Streams - Method-01
-		/*
-		 * String[][] result = Arrays.stream(data) .filter(row ->
-		 * Arrays.stream(row).anyMatch(item -> item != null)) .toArray(String[][]::new);
-		 */
+		// Method-02 START
 
-		// Using ArrayList to collect non-null rows -Method-02
 		List<String[]> resultList = new ArrayList<>();
-		for (String[] row : data) {
-			if (Arrays.stream(row).anyMatch(item -> item != null)) {
-				resultList.add(row);
+		for (int i = 1; i < totalRows; i++) {
+			Row row = sh.getRow(i);
+			if (row == null) {
+				continue;
 			}
+			String[] rowData = new String[totalCells];
+			for (int j = 0; j < totalCells; j++) {
+				//Cell cell = row.getCell(j);
+				Cell cell = row.getCell(j, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				rowData[j] = cell.getStringCellValue().trim();
+			}
+			resultList.add(rowData);
 		}
-		// Convert ArrayList to 2D array
-		String[][] result = resultList.toArray(new String[0][]);
+		wb.close(); // Convert ArrayList to 2D array
+		String[][] result = resultList.toArray(new String[0][0]);
 		return result;
+
+		// Method-02 END
+		
 	}
 
 }

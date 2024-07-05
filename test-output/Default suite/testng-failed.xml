@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Practice.Practice1">
+      <class name="Qspider.Tests.TC_02_CreateContactsTest">
         <methods>
-          <include name="test"/>
+          <include name="testCreateNewContacts" invocation-numbers="3"/>
+          <include name="launchBrowser"/>
+          <include name="quitBrowser"/>
         </methods>
-      </class> <!-- Practice.Practice1 -->
+      </class> <!-- Qspider.Tests.TC_02_CreateContactsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
