@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Qspider.Tests.TC_02_CreateContactsTest">
+      <class name="Qspider.Tests.TC_01_LoginVtigerTest">
         <methods>
-          <include name="testCreateNewContacts" invocation-numbers="3"/>
           <include name="launchBrowser"/>
+          <include name="testLoginWithAllCombinationOfCredentials" invocation-numbers="0"/>
           <include name="quitBrowser"/>
         </methods>
-      </class> <!-- Qspider.Tests.TC_02_CreateContactsTest -->
+      </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

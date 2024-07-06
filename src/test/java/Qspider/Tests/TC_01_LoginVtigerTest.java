@@ -12,12 +12,12 @@ import objectRepository.LoginPage;
 @Listeners(genericUtilities.ListenerImplementation.class)
 public class TC_01_LoginVtigerTest extends BaseClass {
 	HomePage homePage;
-	
+	LoginPage loginPage;
 	
 	@Test(priority = 1, dataProvider= "excelLOginCredentials", groups = "SmokeTestSuite")
 	public void testLoginWithAllCombinationOfCredentials(String uName, String pwd, String status) throws Throwable {
 
-		LoginPage loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(driver);
 		homePage= loginPage.loginOperation(uName, pwd);
 		
 		// Validate Login Successful
@@ -48,8 +48,8 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 	@Test(priority = 2)
 	public void validateLoginPageTitle()
 	{
-		LoginPage loginPg = new LoginPage(driver);
-		String loginPageTitle = loginPg.validateLoginPageTitle(driver);
+		loginPage = new LoginPage(driver);
+		String loginPageTitle = loginPage.validateLoginPageTitle(driver);
 		Assert.assertEquals(loginPageTitle, "vtiger CRM 5 - Commercial Open Source CRM","****** Login Page Title Mismatch ******");
 		LoggerLoad.info("****** login Page Title matched: "+loginPageTitle+" ******");
 	}
@@ -57,8 +57,8 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 	@Test(priority = 3)
 	public void validateLoginPageTitlLogo()
 	{
-		LoginPage loginPg = new LoginPage(driver);
-		boolean loginPageTitle = loginPg.validateLoginPageLogo();
+		loginPage = new LoginPage(driver);
+		boolean loginPageTitle = loginPage.validateLoginPageLogo();
 		Assert.assertTrue(loginPageTitle,"****** Login Page Logo Not Displayed ******");
 		LoggerLoad.info("****** login Page Logo Visible: "+loginPageTitle+"****** ");
 	}	
@@ -66,8 +66,8 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 	@Test(priority = 4, groups = {"SmokeTestSuite","RegressionTestSuite"},retryAnalyzer = genericUtilities.RetryAnalyserImplementation.class)
 	public void testLoginWithValidCredentials() throws Throwable {
 
-		LoginPage loginPg = new LoginPage(driver);
-		homePage = loginPg.loginOperation(pfUtility.getUserName(), pfUtility.getPassword());
+		loginPage = new LoginPage(driver);
+		homePage = loginPage.loginOperation(pfUtility.getUserName(), pfUtility.getPassword());
 
 		// Validate Login Successful
 		Assert.assertEquals(homePage.validateHomePageTitle(), homePage.exptHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");

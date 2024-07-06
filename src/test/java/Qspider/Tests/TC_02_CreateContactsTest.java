@@ -22,7 +22,7 @@ public class TC_02_CreateContactsTest extends BaseClass {
 	
 	@Test(dataProvider ="excelCreatenewContacts",  groups="RegressionTestSuite")
 	public void testCreateNewContacts(String firstName,String lastName) throws Throwable{
-		LoginPage loginPage = new LoginPage(driver);
+		 LoginPage loginPage = new LoginPage(driver);
 		homePage = loginPage.loginOperation(pfUtility.getUserName(),pfUtility.getPassword());
 		       
 		ctPage = homePage.clickOnContacts();
