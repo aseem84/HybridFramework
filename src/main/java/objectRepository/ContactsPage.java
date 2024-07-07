@@ -44,7 +44,7 @@ public class ContactsPage extends BasePage {
 	public CreateNewContactsPage clickOnNewContacts() throws InterruptedException
 	{
 		Thread.sleep(1000);
-		clickElement(getContactsHeaderText());
+		clickElement(getCreateConatctsLink());
 		//createConatctsLink.click();
 		return getInstance(CreateNewContactsPage.class);
 		//return new CreateNewContactsPage(driver);

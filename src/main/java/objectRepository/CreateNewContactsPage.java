@@ -51,7 +51,7 @@ public class CreateNewContactsPage extends BasePage {
 	public ContactInfoPage enterContacts(String fName,String lName) throws InterruptedException
 	{
 		enterText(getfNameBox(),fName);
-		enterText(getfNameBox(),lName);
+		enterText(getlNamebox(),lName);
 		clickElement(getSaveBtn());
 		Thread.sleep(1000);
 		
@@ -63,7 +63,7 @@ public class CreateNewContactsPage extends BasePage {
 	public ContactInfoPage enterContacts(String fName, String lName, String leadSource) throws InterruptedException
 	{
 		enterText(getfNameBox(),fName);
-		enterText(getfNameBox(),lName);
+		enterText(getlNamebox(),lName);
 		handleDropDownGeneric(getDropDownLeadSource(), leadSource);
 		clickElement(getSaveBtn());
 		//saveBtn.click();

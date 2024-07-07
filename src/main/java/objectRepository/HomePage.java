@@ -6,7 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import genericUtilities.SeleniumUtility;
 /**
  * This class will contacts all the web elements of the Home page its getter() methods
  */
@@ -84,7 +83,7 @@ public class HomePage extends BasePage{
 	
 	//Business Methods/Library/Action Methods
 	
-	public String validateHomePageTitle()
+	public String getHomePageTitleText()
 	{
 		return getPageTitle();
 		//return homePageTitle.getText();
@@ -112,7 +111,8 @@ public class HomePage extends BasePage{
 	
 	public void clickProducts()
 	{
-		productsLink.click();
+		clickElement(getProductsLink());
+		//productsLink.click();
 	}
 	public void clickOnLogOut(WebDriver driver) throws InterruptedException
 	{

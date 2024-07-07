@@ -19,26 +19,27 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 
 		loginPage = new LoginPage(driver);
 		homePage= loginPage.loginOperation(uName, pwd);
-		
+		String actualLoginFailMessage = loginPage.getLoginFailMsg();
+		String expectedLoginFailMessage = loginPage.loginWarningMessage;
 		// Validate Login Successful
 		switch(status) {
 			case "vUserVPass":
-				Assert.assertEquals(homePage.validateHomePageTitle(), homePage.exptHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");
+				Assert.assertEquals(homePage.getHomePageTitleText(), homePage.exptHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");
 				LoggerLoad.info("****** After Login Home Page Loaded Successfully ****** ");
 				homePage.clickOnLogOut(driver);
 				LoggerLoad.info("****** LogOut the Application Successfully ******");
 				break;
 			case "ivUserVPass":
-				Assert.assertEquals(loginPage.validateLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
-				LoggerLoad.warn("****** Login Fail: "+loginPage.validateLoginFailMsg()+" ******");
+				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			case "vUserIvPass":
-				Assert.assertEquals(loginPage.validateLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
-				LoggerLoad.warn("****** Login Fail: "+loginPage.validateLoginFailMsg()+" ******");
+				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			case "ivUserIvPass":
-				Assert.assertEquals(loginPage.validateLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
-				LoggerLoad.warn("****** Login Fail: "+loginPage.validateLoginFailMsg()+" ******");
+				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			default:
 				LoggerLoad.warn("****** Login Fail: BLANK UserName and Password ******");
@@ -49,18 +50,20 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 	public void validateLoginPageTitle()
 	{
 		loginPage = new LoginPage(driver);
-		String loginPageTitle = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(loginPageTitle, "vtiger CRM 5 - Commercial Open Source CRM","****** Login Page Title Mismatch ******");
-		LoggerLoad.info("****** login Page Title matched: "+loginPageTitle+" ******");
+		String actualLoginPageTitle = loginPage.getLoginPageTitle();
+		String expectedLoginPageTitle = loginPage.expectedLoginPageTitle;
+		Assert.assertEquals(actualLoginPageTitle, expectedLoginPageTitle,"****** Login Page Title Mismatch ******");
+		LoggerLoad.info("****** login Page Title matched: "+actualLoginPageTitle+" ******");
 	}
 
 	@Test(priority = 3)
 	public void validateLoginPageTitlLogo()
 	{
 		loginPage = new LoginPage(driver);
-		boolean loginPageTitle = loginPage.validateLoginPageLogo();
-		Assert.assertTrue(loginPageTitle,"****** Login Page Logo Not Displayed ******");
-		LoggerLoad.info("****** login Page Logo Visible: "+loginPageTitle+"****** ");
+		boolean loginPageLogoStatus = loginPage.validateLoginPageLogo();
+		
+		Assert.assertTrue(loginPageLogoStatus,"****** Login Page Logo Not Displayed ******");
+		LoggerLoad.info("****** login Page Logo Visible: "+loginPageLogoStatus+"****** ");
 	}	
 
 	@Test(priority = 4, groups = {"SmokeTestSuite","RegressionTestSuite"},retryAnalyzer = genericUtilities.RetryAnalyserImplementation.class)
@@ -68,9 +71,10 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.loginOperation(pfUtility.getUserName(), pfUtility.getPassword());
-
+		String actualHomePageTitle = homePage.getHomePageTitleText();
+		String expectedHomePageTitle = homePage.exptHomePageTitle;
 		// Validate Login Successful
-		Assert.assertEquals(homePage.validateHomePageTitle(), homePage.exptHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");
+		Assert.assertEquals(actualHomePageTitle, expectedHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");
 		LoggerLoad.info("****** After Login Home Page Loaded Successfully ****** ");
 
 		homePage.clickOnLogOut(driver);

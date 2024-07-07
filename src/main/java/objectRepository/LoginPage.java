@@ -11,6 +11,7 @@ public class LoginPage extends BasePage {
 	WebDriver driver;
 
 	public final String loginWarningMessage = "You must specify a valid username and password.";
+	public final String expectedLoginPageTitle = "vtiger CRM 5 - Commercial Open Source CRM";
 	// rule-01: Create separate page for each page in the Web Application
 
 	// Rule-02: Identify the web elements using @FindBy and make them private
@@ -67,10 +68,10 @@ public class LoginPage extends BasePage {
 	// Business Logic methods
 
 	public boolean validateLoginPageLogo() {
-		return logoImg.isDisplayed();
+		return getLogoImg().isDisplayed();
 	}
 
-	public String validateLoginPageTitle() {
+	public String getLoginPageTitle() {
 		return getPageTitle();
 	}
 	
@@ -78,7 +79,7 @@ public class LoginPage extends BasePage {
 		return getPageHeader(loginBtn);
 	}
 	
-
+// Method Overloading Examples in Selenium with java
 	public HomePage loginOperation(String uName, String pwd) {
 		getUserNameBox().sendKeys(uName);
 		getPasswordBox().sendKeys(pwd);
@@ -86,9 +87,21 @@ public class LoginPage extends BasePage {
 		return getInstance(HomePage.class);
 		//return new HomePage(driver);
 	}
+	public HomePage loginOperation() {
+		getUserNameBox().sendKeys("");
+		getPasswordBox().sendKeys("");
+		getLoginBtn().click();
+		return getInstance(HomePage.class);
+	}
+	public HomePage loginOperation(String userCredentials) {
+		getUserNameBox().sendKeys(userCredentials.split(":")[0]);
+		getPasswordBox().sendKeys(userCredentials.split(":")[1]);
+		getLoginBtn().click();
+		return getInstance(HomePage.class);
+	}
 
-	public String validateLoginFailMsg() {
-		return warningMessageBox.getText();
+	public String getLoginFailMsg() {
+		return getElementText(getWarningMessageBox());
 	}
 
 }

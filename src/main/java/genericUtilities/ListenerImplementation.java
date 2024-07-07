@@ -15,15 +15,22 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class ListenerImplementation extends BaseClass implements ITestListener { // extends TestListenerAdapter Both are same
+public class ListenerImplementation implements ITestListener { // extends TestListenerAdapter Both are
+																				// same
 	JavaUtility jUtility = new JavaUtility();
 	ExtentSparkReporter reporter;
 	ExtentReports reports;
 	ExtentTest test;
 	File pathExternReport;
-	
+
 	@Override
 	public void onStart(ITestContext context) {
+		try {
+			extentReportConfiguration();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("****** Suite execution Statrted ******");
 	}
 
@@ -31,17 +38,12 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		String methodName = result.getName();
 		System.out.println(methodName + " :****** Test execution Statrted ******");
-		try {
-			extentReportConfiguration();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		// add @Test to the extent Report
-		test = reports.createTest(methodName,"Look below for more information about the test method "+methodName+" Pass");
+		test = reports.createTest(methodName,
+				"Look below for more information about the test method " + methodName + " Pass");
 		test.assignAuthor("Aseem Ku Patel");
 		test.assignCategory(result.getMethod().getGroups());
-		//test.assignCategory(result.getTestClass().getName());
+		// test.assignCategory(result.getTestClass().getName());
 		test.assignDevice(JavaUtility.systemProperties("os.name"));
 	}
 
@@ -52,7 +54,8 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 		// log the PASS status message to the Extent Report
 		// test.log(Status.PASS,methodName+" :****** Test execution PASSED ******");
-		test.log(Status.PASS, MarkupHelper.createLabel(methodName + ": >>>> <b>execution PASSED</b>", ExtentColor.GREEN));
+		test.log(Status.PASS,
+				MarkupHelper.createLabel(methodName + ": >>>> <b>execution PASSED</b>", ExtentColor.GREEN));
 	}
 
 	@Override
@@ -70,7 +73,6 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 		try {
 			String ScreenShotPath = sUtility.captureScreenShot(BaseClass.sDriver, ScreenShotName);
-
 			// Attach the ScreenShot to the Extent Report
 			test.addScreenCaptureFromPath(ScreenShotPath);
 
@@ -104,9 +106,9 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 		// Auto Launch the Extent Report
 		try {
-			pathExternReport = new File("ExternReports"+pathExternReport);
+			pathExternReport = new File("ExternReports" + pathExternReport);
 			Desktop.getDesktop().browse(pathExternReport.toURI());
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -114,9 +116,11 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 	public void extentReportConfiguration() throws IOException {
 		// Extent Report Configuration
+		
+		pathExternReport = new File("\\Report-" + jUtility.getCurrentDate() + ".html");
+		reporter = new ExtentSparkReporter(".\\ExternReports" + pathExternReport);
+		
 		// Add System/environment information to the report
-		pathExternReport = new File("\\Report-"+jUtility.getCurrentDate() + ".html");
-		reporter = new ExtentSparkReporter(".\\ExternReports" +pathExternReport);
 		reporter.loadJSONConfig(new File("./src/test/resources/extentReport-config.json"));
 		/*
 		 * reporter.config().setDocumentTitle("Extent Report Demo");
@@ -130,20 +134,18 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 		reports = new ExtentReports();
 		reports.attachReporter(reporter);
-		
-		reports.setSystemInfo("Browser Name", JavaUtility.getBrowserInfo(sDriver,"browserName"));
-		reports.setSystemInfo("Base OS", JavaUtility.getBrowserInfo(sDriver,"browserVersion"));
-		
+
+		//reports.setSystemInfo("Browser Name", JavaUtility.getBrowserInfo(driver, "browserName"));
+		//reports.setSystemInfo("Base OS", JavaUtility.getBrowserInfo(driver, "browserVersion"));
+
 		reports.setSystemInfo("Base OS", JavaUtility.systemProperties("os.name"));
 		reports.setSystemInfo("Java Version", JavaUtility.systemProperties("java.version"));
 		reports.setSystemInfo("OS Architechture", JavaUtility.systemProperties("os.arch"));
 		reports.setSystemInfo("User Name", JavaUtility.systemProperties("user.name"));
 		reports.setSystemInfo("Reporter Country", JavaUtility.systemProperties("user.country"));
-		
+
 		reports.setSystemInfo("Base URL", "http://localhost:8888/index.php");
 		reports.setSystemInfo("Execution Date and Time", jUtility.getCurrentDate());
 		reports.setSystemInfo("Reporter Name", "Aseem Kumar Patel");
-		
 	}
-
 }

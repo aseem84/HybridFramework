@@ -26,6 +26,7 @@ public class BasePage extends AbstractPage {
 	private static final long IMPLICIT_WAIT_TIME = 10;
 	Actions action;
 	Select select;
+	
 	@Override
 	public String getPageTitle() {
 		return driver.getTitle();
@@ -41,6 +42,11 @@ public class BasePage extends AbstractPage {
 		return element;
 	}
 
+	@Override
+	public String getElementText(WebElement element) {
+		return element.getText();
+	}
+	
 	@Override
 	public void clickElement(WebElement element) {
 		element.click();		
@@ -205,6 +211,8 @@ public class BasePage extends AbstractPage {
 	public void dismissAlert() {
 		driver.switchTo().alert().dismiss();		
 	}
+
+
 
 
 

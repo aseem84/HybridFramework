@@ -26,6 +26,7 @@ public abstract class AbstractPage {
 	public abstract String getPageTitle();
 	public abstract String getPageHeader(WebElement element);
 	public abstract WebElement getElement(WebElement element);
+	public abstract String getElementText(WebElement element);
 
 	public abstract void clickElement(WebElement element);
 	public abstract void enterText(WebElement element, String text);
