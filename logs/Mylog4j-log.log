@@ -1,8 +1,33 @@
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - =================================================================================================
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - ****** EXECTION STARTED ******
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - ****** login Page Logo Visible: true****** 
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - ****** EXECTION COMPLETED ******
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - =================================================================================================
-[INFO ] 07-07-2024 01:45:15 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 07-07-2024 16:57:57 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:57:57 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 07-07-2024 16:57:57 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 07-07-2024 16:58:00 [main] LoggerLoad - ****** After Login Home Page Loaded Successfully ****** 
+[INFO ] 07-07-2024 16:58:04 [main] LoggerLoad - ****** LogOut the Application Successfully ******
+[INFO ] 07-07-2024 16:58:04 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 07-07-2024 16:58:04 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 07-07-2024 16:58:04 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:04 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 07-07-2024 16:58:06 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:06 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 07-07-2024 16:58:06 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 07-07-2024 16:58:07 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 07-07-2024 16:58:07 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 07-07-2024 16:58:07 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 07-07-2024 16:58:07 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:07 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 07-07-2024 16:58:09 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:09 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 07-07-2024 16:58:09 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 07-07-2024 16:58:11 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 07-07-2024 16:58:11 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 07-07-2024 16:58:11 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 07-07-2024 16:58:11 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:11 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 07-07-2024 16:58:13 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:13 [main] LoggerLoad - ****** EXECTION STARTED ******
+[INFO ] 07-07-2024 16:58:13 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
+[WARN ] 07-07-2024 16:58:14 [main] LoggerLoad - ****** Login Fail: You must specify a valid username and password. ******
+[INFO ] 07-07-2024 16:58:14 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
+[INFO ] 07-07-2024 16:58:14 [main] LoggerLoad - ****** EXECTION COMPLETED ******
+[INFO ] 07-07-2024 16:58:14 [main] LoggerLoad - =================================================================================================
+[INFO ] 07-07-2024 16:58:14 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

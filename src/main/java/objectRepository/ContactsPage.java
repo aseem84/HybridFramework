@@ -6,7 +6,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ContactsPage {
+public class ContactsPage extends BasePage {
 	
 	WebDriver driver;
 	
@@ -20,8 +20,9 @@ public class ContactsPage {
 	
 	public ContactsPage(WebDriver driver)
 	{
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		//this.driver = driver;
+		super(driver);
+        PageFactory.initElements(driver, this);
 	}
 
 	public WebElement getCreateConatctsLink() {
@@ -36,13 +37,16 @@ public class ContactsPage {
 	
 	public String validateContactsHeader()
 	{
-		return contactsHeaderText.getText();
+		return getPageHeader(getContactsHeaderText());
+		//return contactsHeaderText.getText();
 	}
 	
 	public CreateNewContactsPage clickOnNewContacts() throws InterruptedException
 	{
 		Thread.sleep(1000);
-		createConatctsLink.click();
-		return new CreateNewContactsPage(driver);
+		clickElement(getContactsHeaderText());
+		//createConatctsLink.click();
+		return getInstance(CreateNewContactsPage.class);
+		//return new CreateNewContactsPage(driver);
 	}
 }

@@ -6,9 +6,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import genericUtilities.SeleniumUtility;
-
-public class CreateNewContactsPage extends SeleniumUtility {
+public class CreateNewContactsPage extends BasePage {
 	WebDriver driver;
 	@FindBy(xpath="//input[@name='firstname']")
 	@CacheLookup
@@ -29,7 +27,8 @@ public class CreateNewContactsPage extends SeleniumUtility {
 	//Getter methods for all the elements
 	public CreateNewContactsPage(WebDriver driver)
 	{
-		this.driver = driver;
+		//this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -51,20 +50,25 @@ public class CreateNewContactsPage extends SeleniumUtility {
 
 	public ContactInfoPage enterContacts(String fName,String lName) throws InterruptedException
 	{
-		getfNameBox().sendKeys(fName); 
-		getlNamebox().sendKeys(lName);
-		getSaveBtn().click();
+		enterText(getfNameBox(),fName);
+		enterText(getfNameBox(),lName);
+		clickElement(getSaveBtn());
 		Thread.sleep(1000);
-		return new ContactInfoPage(driver);
+		
+		return getInstance(ContactInfoPage.class);
+		
+		//return new ContactInfoPage(driver);
 	}
 	
 	public ContactInfoPage enterContacts(String fName, String lName, String leadSource) throws InterruptedException
 	{
-		fNameBox.sendKeys(fName);
-		lNamebox.sendKeys(lName);
-		handleDropDownGeneric(dropDownLeadSource, leadSource);
-		saveBtn.click();
+		enterText(getfNameBox(),fName);
+		enterText(getfNameBox(),lName);
+		handleDropDownGeneric(getDropDownLeadSource(), leadSource);
+		clickElement(getSaveBtn());
+		//saveBtn.click();
 		Thread.sleep(1000);
-		return new ContactInfoPage(driver);
+		return getInstance(ContactInfoPage.class);		
+		//return new ContactInfoPage(driver);
 	}
 }

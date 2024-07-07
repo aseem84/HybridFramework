@@ -6,7 +6,7 @@
       <class name="Qspider.Tests.TC_01_LoginVtigerTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="testLoginWithAllCombinationOfCredentials" invocation-numbers="0"/>
+          <include name="testLoginWithValidCredentials"/>
           <include name="quitBrowser"/>
         </methods>
       </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->

@@ -49,7 +49,7 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 	public void validateLoginPageTitle()
 	{
 		loginPage = new LoginPage(driver);
-		String loginPageTitle = loginPage.validateLoginPageTitle(driver);
+		String loginPageTitle = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(loginPageTitle, "vtiger CRM 5 - Commercial Open Source CRM","****** Login Page Title Mismatch ******");
 		LoggerLoad.info("****** login Page Title matched: "+loginPageTitle+" ******");
 	}

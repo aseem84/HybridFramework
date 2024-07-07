@@ -10,9 +10,9 @@ import genericUtilities.SeleniumUtility;
 /**
  * This class will contacts all the web elements of the Home page its getter() methods
  */
-public class HomePage extends SeleniumUtility {
+public class HomePage extends BasePage{
 	WebDriver driver;
-	public String exptHomePageTitle = "Home";
+	public String exptHomePageTitle = "Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM";
 	
 	@FindBy(xpath="//a[normalize-space()='Home']")
 	@CacheLookup
@@ -46,7 +46,8 @@ public class HomePage extends SeleniumUtility {
 	//Constructor of the class to initiate the Web Elements
 	public HomePage(WebDriver driver)
 	{
-		this.driver = driver;
+		super(driver);
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -85,7 +86,8 @@ public class HomePage extends SeleniumUtility {
 	
 	public String validateHomePageTitle()
 	{
-		return homePageTitle.getText();
+		return getPageTitle();
+		//return homePageTitle.getText();
 	}
 	public void clickLeads()
 	{
@@ -94,14 +96,18 @@ public class HomePage extends SeleniumUtility {
 	
 	public void clickOrganizations()
 	{
-		organizationsLink.click();
+		clickElement(getOrganizationsLink());
+		//organizationsLink.click();
 	}
 	
 	public ContactsPage clickOnContacts() throws InterruptedException
 	{
 		Thread.sleep(1000);
-		conatctsLink.click();
-		return new ContactsPage(driver);
+		//conatctsLink.click();
+		clickElement(getConatctsLink());
+		
+		//return new ContactsPage(driver);
+		return getInstance(ContactsPage.class);
 	}
 	
 	public void clickProducts()
@@ -110,9 +116,10 @@ public class HomePage extends SeleniumUtility {
 	}
 	public void clickOnLogOut(WebDriver driver) throws InterruptedException
 	{
-		mouseHoverAction(driver, getAdminImgSign());
+		handleMouseHoverAction(getAdminImgSign());
 		Thread.sleep(1000);
-		logOutLink.click();
+		clickElement(getLogOutLink());
+		//logOutLink.click();
 	}
 	
 }

@@ -1,21 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-07T01:45:11 IST" name="Default suite" finished-at="2024-07-07T01:45:15 IST" duration-ms="3818">
+  <suite started-at="2024-07-07T16:57:55 IST" name="Default suite" finished-at="2024-07-07T16:58:14 IST" duration-ms="19578">
     <groups>
+      <group name="SmokeTestSuite">
+        <method signature="TC_01_LoginVtigerTest.testLoginWithAllCombinationOfCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" name="testLoginWithAllCombinationOfCredentials" class="Qspider.Tests.TC_01_LoginVtigerTest"/>
+      </group> <!-- SmokeTestSuite -->
     </groups>
-    <test started-at="2024-07-07T01:45:11 IST" name="Default test" finished-at="2024-07-07T01:45:15 IST" duration-ms="3818">
+    <test started-at="2024-07-07T16:57:55 IST" name="Default test" finished-at="2024-07-07T16:58:14 IST" duration-ms="19578">
       <class name="Qspider.Tests.TC_01_LoginVtigerTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T01:45:11 IST" name="launchBrowser" finished-at="2024-07-07T01:45:15 IST" duration-ms="3318" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:57:55 IST" name="launchBrowser" finished-at="2024-07-07T16:57:57 IST" duration-ms="2068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="validateLoginPageTitlLogo()[pri:3, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T01:45:15 IST" name="validateLoginPageTitlLogo" finished-at="2024-07-07T01:45:15 IST" duration-ms="257" status="PASS">
+        <test-method signature="testLoginWithAllCombinationOfCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:57:57 IST" name="testLoginWithAllCombinationOfCredentials" data-provider="excelLOginCredentials" finished-at="2024-07-07T16:58:04 IST" duration-ms="6448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vUserVPass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateLoginPageTitlLogo -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T01:45:15 IST" name="quitBrowser" finished-at="2024-07-07T01:45:15 IST" duration-ms="204" status="PASS">
+        </test-method> <!-- testLoginWithAllCombinationOfCredentials -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:04 IST" name="quitBrowser" finished-at="2024-07-07T16:58:04 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:04 IST" name="launchBrowser" finished-at="2024-07-07T16:58:06 IST" duration-ms="1732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testLoginWithAllCombinationOfCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:06 IST" name="testLoginWithAllCombinationOfCredentials" data-provider="excelLOginCredentials" finished-at="2024-07-07T16:58:07 IST" duration-ms="1486" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aseem]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ivUserVPass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithAllCombinationOfCredentials -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:07 IST" name="quitBrowser" finished-at="2024-07-07T16:58:07 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:07 IST" name="launchBrowser" finished-at="2024-07-07T16:58:09 IST" duration-ms="1712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testLoginWithAllCombinationOfCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:09 IST" name="testLoginWithAllCombinationOfCredentials" data-provider="excelLOginCredentials" finished-at="2024-07-07T16:58:11 IST" duration-ms="1532" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[patel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vUserIvPass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithAllCombinationOfCredentials -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:11 IST" name="quitBrowser" finished-at="2024-07-07T16:58:11 IST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:11 IST" name="launchBrowser" finished-at="2024-07-07T16:58:13 IST" duration-ms="1797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="testLoginWithAllCombinationOfCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:13 IST" name="testLoginWithAllCombinationOfCredentials" data-provider="excelLOginCredentials" finished-at="2024-07-07T16:58:14 IST" duration-ms="1439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aseem]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ivUserIvPass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithAllCombinationOfCredentials -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Qspider.Tests.TC_01_LoginVtigerTest@222545dc]" started-at="2024-07-07T16:58:14 IST" name="quitBrowser" finished-at="2024-07-07T16:58:14 IST" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
