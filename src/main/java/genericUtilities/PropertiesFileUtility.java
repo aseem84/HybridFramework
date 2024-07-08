@@ -52,5 +52,9 @@ public class PropertiesFileUtility {
 	public String getPassword() throws Throwable {
 		return prop.getProperty("password");
 	}
+	
+	public String getHeadless() throws Throwable {
+        return prop.getProperty("headless");
+    }
 
 }

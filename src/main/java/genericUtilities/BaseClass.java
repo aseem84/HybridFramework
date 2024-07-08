@@ -1,12 +1,14 @@
 package genericUtilities;
 
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.*;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import objectRepository.HomePage;
 import objectRepository.LoginPage;
@@ -16,7 +18,8 @@ import objectRepository.LoginPage;
  * 
  * @author Aseem
  */
-public class BaseClass {
+public class BaseClass  {
+
 	/**
 	 * This method will launch the Browser based on the browser name it read from
 	 * property file
@@ -29,8 +32,7 @@ public class BaseClass {
 	public ExcelFileUtility efUtility = new ExcelFileUtility();
 	public WebDriver driver;
 	static WebDriver sDriver;
-	String[] s = null;
-
+	
 	// @BeforeSuite(groups ="SmokeTestSuite") //this one or write the below code
 	// @BeforeSuite(alwaysRun = true)
 	public void dbConnectOpen() {
@@ -44,24 +46,47 @@ public class BaseClass {
 	public void launchBrowser() throws Throwable {
 		String browserName = pfUtility.getBrowser();
 		String url = pfUtility.getURL();
-
-		if (browserName.equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		} else if (browserName.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
-		} else {
-			driver = new ChromeDriver();
+		String headless = pfUtility.getHeadless();
+		
+		if(headless.equalsIgnoreCase("true")) {
+			if (browserName.equalsIgnoreCase("chrome")) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless=new");
+				driver = new ChromeDriver(options);
+			} else if (browserName.equalsIgnoreCase("firefox")) {
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--headless=new");
+				driver = new FirefoxDriver(options);
+			} else if (browserName.equalsIgnoreCase("edge")) {
+				EdgeOptions options = new EdgeOptions();
+				options.addArguments("--headless=new");
+				driver = new EdgeDriver(options);
+			} else {
+				driver = new ChromeDriver();
+			}
+			sUtil.deleteAllCookies(driver);
+			sUtil.addImplicitlyWait(driver);
+			sUtil.addpageLoadTimeoutWait(driver);
+			
 		}
-
-		sUtil.maximizeWindow(driver);
-		sUtil.deleteAllCookies(driver);
-		sUtil.addImplicitlyWait(driver);
-		sUtil.addpageLoadTimeoutWait(driver);
-
-		sDriver = driver;
+		else
+		{
+			if (browserName.equalsIgnoreCase("chrome")) {
+				driver = new CustomChromeDriver();
+			} else if (browserName.equalsIgnoreCase("firefox")) {
+				driver = new CustomFirefoxDriver();
+			} else if (browserName.equalsIgnoreCase("edge")) {
+				driver = new CustomEdgeDriver();
+			} else {
+				System.out.println("Unknown browser Name: " + browserName);
+				System.out.println("Executing in headless mode for Chrome!");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless=new");
+				driver = new ChromeDriver(options);
+			}
+		}
 		driver.get(url);
+		sDriver = driver;
 		LoggerLoad.info(
 				"=================================================================================================");
 		LoggerLoad.info("****** EXECTION STARTED ******");
@@ -70,7 +95,7 @@ public class BaseClass {
 
 	// @BeforeMethod(groups ="SmokeTestSuite")
 	// @BeforeMethod(alwaysRun = true)
-	public void login() throws Throwable {
+	public void doLogin() throws Throwable {
 		String uName = pfUtility.getUserName();
 		String pwd = pfUtility.getPassword();
 
@@ -80,7 +105,7 @@ public class BaseClass {
 
 	// @AfterMethod(groups ="SmokeTestSuite")
 	// @AfterMethod(alwaysRun = true)
-	public void logout() throws Throwable {
+	public void doLogout() throws Throwable {
 		Thread.sleep(1000);
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnLogOut(driver);

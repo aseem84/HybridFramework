@@ -3,14 +3,13 @@
 <suite name="Failed suite [vTiger Automation Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="vTiger Automation Test(failed)">
     <classes>
-      <class name="Qspider.Tests.TC_02_CreateContactsTest">
+      <class name="Qspider.Tests.TC_01_LoginVtigerTest">
         <methods>
-          <include name="testCreateNewContacts" invocation-numbers="0 1 2 3"/>
           <include name="launchBrowser"/>
-          <include name="testCreateNewContactsWithLeadSource" invocation-numbers="0 1 2 3"/>
+          <include name="testLoginWithAllCombinationOfCredentials" invocation-numbers="0"/>
           <include name="quitBrowser"/>
         </methods>
-      </class> <!-- Qspider.Tests.TC_02_CreateContactsTest -->
+      </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->
     </classes>
   </test> <!-- vTiger Automation Test(failed) -->
 </suite> <!-- Failed suite [vTiger Automation Suite] -->

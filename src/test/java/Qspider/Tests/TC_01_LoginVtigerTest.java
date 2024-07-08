@@ -19,26 +19,25 @@ public class TC_01_LoginVtigerTest extends BaseClass {
 
 		loginPage = new LoginPage(driver);
 		homePage= loginPage.loginOperation(uName, pwd);
-		String actualLoginFailMessage = loginPage.getLoginFailMsg();
-		String expectedLoginFailMessage = loginPage.loginWarningMessage;
+		
 		// Validate Login Successful
 		switch(status) {
 			case "vUserVPass":
 				Assert.assertEquals(homePage.getHomePageTitleText(), homePage.exptHomePageTitle,"****** Login Fail: HomePage Title Missmatch ******");
-				LoggerLoad.info("****** After Login Home Page Loaded Successfully ****** ");
+				LoggerLoad.info("****** After Login Home Page Loaed Successfully ****** ");
 				homePage.clickOnLogOut(driver);
 				LoggerLoad.info("****** LogOut the Application Successfully ******");
 				break;
 			case "ivUserVPass":
-				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				Assert.assertEquals(loginPage.getLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
 				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			case "vUserIvPass":
-				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				Assert.assertEquals(loginPage.getLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
 				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			case "ivUserIvPass":
-				Assert.assertEquals(actualLoginFailMessage,expectedLoginFailMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
+				Assert.assertEquals(loginPage.getLoginFailMsg(),loginPage.loginWarningMessage,"****** Login Fail: Invalid UserName and Correct Password ******");
 				LoggerLoad.warn("****** Login Fail: "+loginPage.getLoginFailMsg()+" ******");
 				break;
 			default:

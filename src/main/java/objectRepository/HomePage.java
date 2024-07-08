@@ -90,7 +90,7 @@ public class HomePage extends BasePage{
 	}
 	public void clickLeads()
 	{
-		leadsLink.click();
+		clickElement(getLeadsLink());
 	}
 	
 	public void clickOrganizations()

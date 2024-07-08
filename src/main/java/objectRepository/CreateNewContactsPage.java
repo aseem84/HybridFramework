@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CreateNewContactsPage extends BasePage {
 	WebDriver driver;
+	
 	@FindBy(xpath="//input[@name='firstname']")
 	@CacheLookup
 	private WebElement fNameBox;

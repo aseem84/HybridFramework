@@ -61,7 +61,7 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName(); // we can write result.getName()
-		System.out.println(methodName + ": ****** Test execution FAILED ******");
+		System.out.println(methodName + " : ****** Test execution FAILED ******");
 
 		// Log the Fail Status message to the Extent Report
 		// test.log(Status.FAIL, methodName+": ****** Test execution FAILED ******");
