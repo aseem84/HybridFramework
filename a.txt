@@ -10,7 +10,7 @@ hello aseem
 
 Done few changes in the file by gbl-login branch. 
 
-Two words added.- commit number-2 by gbl-login branch
-new changes added by a new user and merged in github.
+Two words added.- commit number 2 by gbl-login branch
+new changes were added by a new user and merged in Git Hub.
 
-Changed -> changes by gbl-login (merge iy with master abd do add some thing
+Changed -> changes by gbl-login (merge iy with master and do add something
