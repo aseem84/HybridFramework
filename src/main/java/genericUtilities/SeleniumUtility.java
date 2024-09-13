@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.ImageHtmlEmail;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,8 +26,8 @@ import com.google.common.io.Files;
  * @author aseem
  */
 public class SeleniumUtility {
-	private static final long PAGE_LOAD_TIMEOUT = 10;
-	private static final long IMPLICIT_WAIT_TIME = 10;
+	private static final long PAGE_LOAD_TIMEOUT = 20;
+	private static final long IMPLICIT_WAIT_TIME = 20;
 	/**
 	 * This method will maximize the Window
 	 * 
@@ -279,7 +283,36 @@ public class SeleniumUtility {
 		Files.copy(src, dst);// need https://mvnrepository.com/artifact/commons-io/commons-io dependency
 		return dst.getAbsolutePath(); // used for extent report
 	}
+	public void sendEmailReport(File pathExternReport) {
+	    try {
+	        // Prepare the email
+	        ImageHtmlEmail email = new ImageHtmlEmail();
+	        email.setHostName("smtp.gmail.com");
+	        email.setSmtpPort(465);
+	        email.setAuthenticator(new DefaultAuthenticator("mfsi.aseemk@gmail.com", "S0n1@smith"));
+	        email.setSSLOnConnect(true);
+	        email.setFrom("your_email@domain.com");
+	        email.setSubject("Test Automation Report");
+	        email.setMsg("Please find the attached Report....");
+	        email.addTo("aseemk.patel@gmail.com");
 
+	        // Create the attachment
+	        EmailAttachment attachment = new EmailAttachment();
+	        attachment.setPath(pathExternReport.getAbsolutePath());
+	        attachment.setDisposition(EmailAttachment.ATTACHMENT);
+	        attachment.setDescription("Extent Report");
+	        attachment.setName("Report.html");
+
+	        // Attach the file to the email
+	        email.attach(attachment);
+
+	        // Send the email
+	        email.send();
+	    } catch (EmailException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
 	/**
 	 * This method will closes single tab/window ,driver currently focusing
 	 * 

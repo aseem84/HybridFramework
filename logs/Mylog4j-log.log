@@ -1,9 +1,30 @@
-[INFO ] 08-07-2024 23:53:41 [main] LoggerLoad - =================================================================================================
-[INFO ] 08-07-2024 23:53:41 [main] LoggerLoad - ****** EXECTION STARTED ******
-[INFO ] 08-07-2024 23:53:41 [main] LoggerLoad - ****** Browser Opened and Page loaded Successfully ******
-[INFO ] 08-07-2024 23:53:44 [main] LoggerLoad - ****** After Login Home Page Loaded Successfully ****** 
-[INFO ] 08-07-2024 23:53:48 [main] LoggerLoad - ****** LogOut the Application Successfully ******
-[INFO ] 08-07-2024 23:53:48 [main] LoggerLoad - ****** Browser tabs Closed Successfully ******
-[INFO ] 08-07-2024 23:53:48 [main] LoggerLoad - ****** EXECTION COMPLETED ******
-[INFO ] 08-07-2024 23:53:48 [main] LoggerLoad - =================================================================================================
-[INFO ] 08-07-2024 23:53:48 [main] LoggerLoad - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 13-09-2024 16:10:50 - [genericUtilities.BaseClass => launchBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:10:50 - [genericUtilities.BaseClass => launchBrowser]: ****** SUITE EXECUTION STARTED ******
+[INFO ] 13-09-2024 16:10:50 - [genericUtilities.BaseClass => launchBrowser]: ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 13-09-2024 16:10:50 - [genericUtilities.ListenerImplementation => onTestStart]: ****** Test execution Started ******
+[INFO ] 13-09-2024 16:10:50 - [Qspider.Tests.TC_01_LoginVtigerTest => testLoginWithValidCredentials]:  ****** Starting test: Login with valid credentials ******
+[WARN ] 13-09-2024 16:11:10 - Test Case - testLoginWithValidCredentials:=> ****** Test Execution Skipped ******
+[INFO ] 13-09-2024 16:11:11 - [genericUtilities.BaseClass => quitBrowser]: ****** Browser tabs Closed Successfully ******
+[INFO ] 13-09-2024 16:11:11 - [genericUtilities.BaseClass => quitBrowser]: ****** SUITE EXECUTION COMPLETED ******
+[INFO ] 13-09-2024 16:11:11 - [genericUtilities.BaseClass => quitBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:11:11 - [genericUtilities.BaseClass => quitBrowser]: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 13-09-2024 16:11:16 - [genericUtilities.BaseClass => launchBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:11:16 - [genericUtilities.BaseClass => launchBrowser]: ****** SUITE EXECUTION STARTED ******
+[INFO ] 13-09-2024 16:11:16 - [genericUtilities.BaseClass => launchBrowser]: ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 13-09-2024 16:11:16 - [genericUtilities.ListenerImplementation => onTestStart]: ****** Test execution Started ******
+[INFO ] 13-09-2024 16:11:16 - [Qspider.Tests.TC_01_LoginVtigerTest => testLoginWithValidCredentials]:  ****** Starting test: Login with valid credentials ******
+[WARN ] 13-09-2024 16:11:36 - Test Case - testLoginWithValidCredentials:=> ****** Test Execution Skipped ******
+[INFO ] 13-09-2024 16:11:37 - [genericUtilities.BaseClass => quitBrowser]: ****** Browser tabs Closed Successfully ******
+[INFO ] 13-09-2024 16:11:37 - [genericUtilities.BaseClass => quitBrowser]: ****** SUITE EXECUTION COMPLETED ******
+[INFO ] 13-09-2024 16:11:37 - [genericUtilities.BaseClass => quitBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:11:37 - [genericUtilities.BaseClass => quitBrowser]: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[INFO ] 13-09-2024 16:11:42 - [genericUtilities.BaseClass => launchBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:11:42 - [genericUtilities.BaseClass => launchBrowser]: ****** SUITE EXECUTION STARTED ******
+[INFO ] 13-09-2024 16:11:42 - [genericUtilities.BaseClass => launchBrowser]: ****** Browser Opened and Page loaded Successfully ******
+[INFO ] 13-09-2024 16:11:42 - [genericUtilities.ListenerImplementation => onTestStart]: ****** Test execution Started ******
+[INFO ] 13-09-2024 16:11:42 - [Qspider.Tests.TC_01_LoginVtigerTest => testLoginWithValidCredentials]:  ****** Starting test: Login with valid credentials ******
+[ERROR] 13-09-2024 16:12:02 - ****** Test Execution Failed ******
+[INFO ] 13-09-2024 16:12:03 - [genericUtilities.BaseClass => quitBrowser]: ****** Browser tabs Closed Successfully ******
+[INFO ] 13-09-2024 16:12:03 - [genericUtilities.BaseClass => quitBrowser]: ****** SUITE EXECUTION COMPLETED ******
+[INFO ] 13-09-2024 16:12:03 - [genericUtilities.BaseClass => quitBrowser]: =================================================================================================
+[INFO ] 13-09-2024 16:12:03 - [genericUtilities.BaseClass => quitBrowser]: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
