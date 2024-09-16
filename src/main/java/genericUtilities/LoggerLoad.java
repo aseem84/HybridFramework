@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class LoggerLoad {
 	private LoggerLoad() {
-		// Private constructor to prevent instantiation from outside the class.
+		// This Private constructor is to prevent instantiation from outside the class.
 		throw new AssertionError("Cannot instantiate this utility class.");
 	}
 
