@@ -40,4 +40,5 @@ public class LoggerLoad {
 	    StackTraceElement caller = Thread.currentThread().getStackTrace()[3];
 		return "[" + caller.getClassName() + " => " + caller.getMethodName() + "]";
 	}
+	
 }
