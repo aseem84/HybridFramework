@@ -18,6 +18,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ListenerImplementation implements ITestListener { // extends TestListenerAdapter Both are
 																				// same
 	JavaUtility jUtility = new JavaUtility();
+	SeleniumUtility sUtility = new SeleniumUtility();
 	ExtentSparkReporter reporter;
 	ExtentReports reports;
 	ExtentTest test;
@@ -28,7 +29,6 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 		try {
 			extentReportConfiguration();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("****** Suite execution Statrted ******");
@@ -37,7 +37,8 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 	@Override
 	public void onTestStart(ITestResult result) {
 		String methodName = result.getName();
-		System.out.println(methodName + " :****** Test execution Statrted ******");
+		System.out.println(methodName + " :****** Test execution Started ******");
+		LoggerLoad.info("****** Test execution Started ******");
 		// add @Test to the extent Report
 		test = reports.createTest(methodName,
 				"Look below for more information about the test method " + methodName + " Pass");
@@ -51,6 +52,7 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 	public void onTestSuccess(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		System.out.println(methodName + ": ****** Test execution PASSED ******");
+		LoggerLoad.info("Test Case - " + methodName + ":=> ****** Test Execution Passed ****** ");
 
 		// log the PASS status message to the Extent Report
 		// test.log(Status.PASS,methodName+" :****** Test execution PASSED ******");
@@ -61,14 +63,14 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName(); // we can write result.getName()
-		System.out.println(methodName + " : ****** Test execution FAILED ******");
+		System.err.println(methodName + " : ****** Test execution FAILED ******");
+        LoggerLoad.error("****** Test Execution Failed ******");
 
 		// Log the Fail Status message to the Extent Report
 		// test.log(Status.FAIL, methodName+": ****** Test execution FAILED ******");
 		test.log(Status.FAIL, MarkupHelper.createLabel(methodName + ": execution FAILED", ExtentColor.RED));
 		test.fail(result.getThrowable());
 
-		SeleniumUtility sUtility = new SeleniumUtility();
 		String ScreenShotName = methodName + "-" + jUtility.getCurrentDate();
 
 		try {
@@ -85,6 +87,7 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 	public void onTestSkipped(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		System.out.println(methodName + ": ****** Test execution Skipped ******");
+		LoggerLoad.warn("Test Case - " + methodName + ":=> ****** Test Execution Skipped ******");
 
 		// Log the Skip Status message to the Extent Report
 		// test.log(Status.SKIP, methodName+": ****** Test execution Skipped ******");
@@ -112,6 +115,10 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		finally {
+		//sUtility.sendEmailReport(pathExternReport);
+		System.out.println("****** Email Report Done ****");
+		}
 	}
 
 	public void extentReportConfiguration() throws IOException {
@@ -138,6 +145,7 @@ public class ListenerImplementation implements ITestListener { // extends TestLi
 		//reports.setSystemInfo("Browser Name", JavaUtility.getBrowserInfo(driver, "browserName"));
 		//reports.setSystemInfo("Base OS", JavaUtility.getBrowserInfo(driver, "browserVersion"));
 
+		
 		reports.setSystemInfo("Base OS", JavaUtility.systemProperties("os.name"));
 		reports.setSystemInfo("Java Version", JavaUtility.systemProperties("java.version"));
 		reports.setSystemInfo("OS Architechture", JavaUtility.systemProperties("os.arch"));

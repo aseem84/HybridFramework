@@ -15,24 +15,18 @@ import objectRepository.LoginPage;
 
 /**
  * This class contains basic configuration annotations of TestNG
- * 
- * @author Aseem
  */
-public class BaseClass  {
+public class BaseClass {
 
 	/**
-	 * This method will launch the Browser based on the browser name it read from
-	 * property file
-	 * 
-	 * @return
-	 * @throws Throwable
+	 * This method will launch the Browser based on the browser name it read from property file
 	 */
 	public SeleniumUtility sUtil = new SeleniumUtility();
 	public PropertiesFileUtility pfUtility = new PropertiesFileUtility();
 	public ExcelFileUtility efUtility = new ExcelFileUtility();
 	public WebDriver driver;
 	static WebDriver sDriver;
-	
+
 	// @BeforeSuite(groups ="SmokeTestSuite") //this one or write the below code
 	// @BeforeSuite(alwaysRun = true)
 	public void dbConnectOpen() {
@@ -47,19 +41,20 @@ public class BaseClass  {
 		String browserName = pfUtility.getBrowser();
 		String url = pfUtility.getURL();
 		String headless = pfUtility.getHeadless();
-		
-		if(headless.equalsIgnoreCase("true")) {
+		String headMode = "--headless=new";
+
+		if (headless.equalsIgnoreCase("true")) {
 			if (browserName.equalsIgnoreCase("chrome")) {
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=new");
+				options.addArguments(headMode);
 				driver = new ChromeDriver(options);
 			} else if (browserName.equalsIgnoreCase("firefox")) {
 				FirefoxOptions options = new FirefoxOptions();
-				options.addArguments("--headless=new");
+				options.addArguments(headMode);
 				driver = new FirefoxDriver(options);
 			} else if (browserName.equalsIgnoreCase("edge")) {
 				EdgeOptions options = new EdgeOptions();
-				options.addArguments("--headless=new");
+				options.addArguments(headMode);
 				driver = new EdgeDriver(options);
 			} else {
 				driver = new ChromeDriver();
@@ -67,29 +62,44 @@ public class BaseClass  {
 			sUtil.deleteAllCookies(driver);
 			sUtil.addImplicitlyWait(driver);
 			sUtil.addpageLoadTimeoutWait(driver);
-			
-		}
-		else
-		{
-			if (browserName.equalsIgnoreCase("chrome")) {
+
+		} else {
+			switch (browserName.toLowerCase()) {
+			case "chrome":
 				driver = new CustomChromeDriver();
-			} else if (browserName.equalsIgnoreCase("firefox")) {
+				break;
+			case "firefox":
 				driver = new CustomFirefoxDriver();
-			} else if (browserName.equalsIgnoreCase("edge")) {
+				break;
+			case "edge":
 				driver = new CustomEdgeDriver();
-			} else {
+				break;
+			default:
 				System.out.println("Unknown browser Name: " + browserName);
 				System.out.println("Executing in headless mode for Chrome!");
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=new");
+				options.addArguments(headMode);
 				driver = new ChromeDriver(options);
 			}
+			/*
+			 * if (browserName.equalsIgnoreCase("chrome")) { } else if
+			 * (browserName.equalsIgnoreCase("firefox")) { driver = new
+			 * CustomFirefoxDriver(); } else if (browserName.equalsIgnoreCase("edge")) {
+			 * driver = new CustomEdgeDriver(); } else {
+			 * System.out.println("Unknown browser Name: " + browserName);
+			 * System.out.println("Executing in headless mode for Chrome!"); ChromeOptions
+			 * options = new ChromeOptions(); options.addArguments("--headless=new"); driver
+			 * = new ChromeDriver(options); }
+			 */
+			sUtil.deleteAllCookies(driver);
+			sUtil.addImplicitlyWait(driver);
+			sUtil.addpageLoadTimeoutWait(driver);
 		}
 		driver.get(url);
 		sDriver = driver;
 		LoggerLoad.info(
 				"=================================================================================================");
-		LoggerLoad.info("****** EXECTION STARTED ******");
+		LoggerLoad.info("****** SUITE EXECUTION STARTED ******");
 		LoggerLoad.info("****** Browser Opened and Page loaded Successfully ******");
 	}
 
@@ -116,7 +126,7 @@ public class BaseClass  {
 	public void quitBrowser() throws InterruptedException {
 		driver.quit();
 		LoggerLoad.info("****** Browser tabs Closed Successfully ******");
-		LoggerLoad.info("****** EXECTION COMPLETED ******");
+		LoggerLoad.info("****** SUITE EXECUTION COMPLETED ******");
 		LoggerLoad.info(
 				"=================================================================================================");
 		LoggerLoad.info(

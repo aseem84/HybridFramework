@@ -5,9 +5,9 @@
   "timelineEnabled": false,
   "offlineMode": true,
   "thumbnailForBase64": false,
-  "documentTitle": "Extent Report Demo",
-  "reportName": "Vtiger Execution Report",
+  "documentTitle": "Green Bricks Labs (GBL) Report Demo",
+  "reportName": "Green Bricks Labs Execution Report",
   "timeStampFormat": "dd-MM-yyyy HH:mm:ss",
-  "js": "document.getElementsByClassName('logo')[0].style.display='none'",
+  "js": "document.getElementsByClassName('logo')[0].style.display='block'",
   "css": ".badge-primary{background-color:#ff0099}"
 }

@@ -4,14 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 	// This is the example of Encapsulation in Java
 	WebDriver driver;
 
 	public final String loginWarningMessage = "You must specify a valid username and password.";
-	public final String expectedLoginPageTitle = "vtiger CRM 5 - Commercial Open Source CRM";
+	public final String expectedLoginPageTitle = "maverick";
 	// rule-01: Create separate page for each page in the Web Application
 
 	// Rule-02: Identify the web elements using @FindBy and make them private
@@ -40,7 +39,7 @@ public class LoginPage extends BasePage {
 	public LoginPage(WebDriver driver) {
 		//this.driver = driver;
 		super(driver);
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
 	}
 
 	// Rule-04: Generate getter() methods of each element in the page
@@ -65,7 +64,7 @@ public class LoginPage extends BasePage {
 		return warningMessageBox;
 	}
 
-	// Business Logic methods
+	// Rule-05: BusinessLogic methods
 
 	public boolean validateLoginPageLogo() {
 		return getLogoImg().isDisplayed();
@@ -81,9 +80,11 @@ public class LoginPage extends BasePage {
 	
 // Method Overloading Examples in Selenium with java
 	public HomePage loginOperation(String uName, String pwd) {
+		if(getUserNameBox().isDisplayed() && getPasswordBox().isDisplayed()) {
 		getUserNameBox().sendKeys(uName);
 		getPasswordBox().sendKeys(pwd);
 		getLoginBtn().click();
+		}
 		return getInstance(HomePage.class);
 		//return new HomePage(driver);
 	}
@@ -93,6 +94,7 @@ public class LoginPage extends BasePage {
 		getLoginBtn().click();
 		return getInstance(HomePage.class);
 	}
+	// comment for the following methodsn
 	public HomePage loginOperation(String userCredentials) {
 		getUserNameBox().sendKeys(userCredentials.split(":")[0]);
 		getPasswordBox().sendKeys(userCredentials.split(":")[1]);
@@ -103,5 +105,7 @@ public class LoginPage extends BasePage {
 	public String getLoginFailMsg() {
 		return getElementText(getWarningMessageBox());
 	}
+	
+
 
 }

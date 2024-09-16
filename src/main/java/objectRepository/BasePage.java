@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -21,6 +22,7 @@ public class BasePage extends AbstractPage {
 
 	public BasePage(WebDriver driver) {
 		super(driver);
+		PageFactory.initElements(driver, this);
 	}
 	private static final long PAGE_LOAD_TIMEOUT = 10;
 	private static final long IMPLICIT_WAIT_TIME = 10;

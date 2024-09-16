@@ -14,18 +14,15 @@ public class JavaUtility {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
 		return sdf.format(date);
-		// return new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new
-		// Date()).toString();
+		// return new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(new Date()).toString();
 	}
 
 	public static String randomAlphaNumeric() {
-		String randomAlphaNumeric = RandomStringUtils.randomAlphanumeric(5, 8);
-		return randomAlphaNumeric.toLowerCase();
+		return RandomStringUtils.randomAlphanumeric(5, 8).toLowerCase();
 	}
 
 	public static String randomNumber() {
-		String randomNumber = RandomStringUtils.randomNumeric(5);
-		return randomNumber;
+		return RandomStringUtils.randomNumeric(5);
 	}
 
 	public static String systemProperties(String property) {

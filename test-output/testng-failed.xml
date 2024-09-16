@@ -5,8 +5,8 @@
     <classes>
       <class name="Qspider.Tests.TC_01_LoginVtigerTest">
         <methods>
-          <include name="validateLoginPageTitle"/>
           <include name="launchBrowser"/>
+          <include name="testLoginWithValidCredentials"/>
           <include name="quitBrowser"/>
         </methods>
       </class> <!-- Qspider.Tests.TC_01_LoginVtigerTest -->

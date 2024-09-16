@@ -17,7 +17,7 @@ public abstract class AbstractPage {
 	WebDriverWait wait;
 	private static final long WAIT_TIME = 10;
 	
-	public AbstractPage(WebDriver driver) {
+	protected AbstractPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(WAIT_TIME));
     }
@@ -53,7 +53,7 @@ public abstract class AbstractPage {
 	public abstract void handleScrollDownAction();
 	public abstract void scrollToElement(WebElement element);
 		
-	//For example, a method to handle dropdowns:
+	//For example, a method to handle Dropdowns:
 	public abstract void selectDropDownByVisibleText(WebElement element, String value);
 	public abstract void selectDropDownByValue(WebElement element, String value);
 	public abstract void selectDropDownByIndex(WebElement element, int index);

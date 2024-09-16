@@ -6,17 +6,17 @@ import java.util.Properties;
 /**
  * This class consist of generic methods related to properties file
  * 
- * @author aseem
+ * @author
  */
 public class PropertiesFileUtility {
 
 	private String propertiesFilePath = ".\\src\\test\\resources\\config.properties";
-	public Properties prop;
-
+	private Properties prop;
+	FileInputStream fis;
 	public PropertiesFileUtility() {
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream(propertiesFilePath);
+			fis = new FileInputStream(propertiesFilePath);
 			prop.load(fis);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -31,29 +31,29 @@ public class PropertiesFileUtility {
 	 * @return String
 	 * @throws Throwable
 	 */
-	public String readPropertiesFileGeneric(String key) throws Throwable {
+	public String readPropertiesFileGeneric(String key) {
 		// return pro.get(value).toString(); // keep the return type as Object or type
 		// it to String as done
 		return prop.getProperty(key);
 	}
 
-	public String getBrowser() throws Throwable {
+	public String getBrowser()  {
 		return prop.getProperty("browser");
 	}
 
-	public String getURL() throws Throwable {
-		return prop.getProperty("URL");
+	public String getURL()  {
+		return prop.getProperty("appURL");
 	}
 
-	public String getUserName() throws Throwable {
+	public String getUserName()  {
 		return prop.getProperty("uName");
 	}
 
-	public String getPassword() throws Throwable {
+	public String getPassword()  {
 		return prop.getProperty("password");
 	}
 	
-	public String getHeadless() throws Throwable {
+	public String getHeadless() {
         return prop.getProperty("headless");
     }
 

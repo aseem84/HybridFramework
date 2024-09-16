@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * This class will inherit the ChromeDriver class and override all the methods
- * along with the new functionalities
+ * along with the new functionalities. this class is called by the BaseClass.java to create the driver instance
  * 
  * @author aseem patel
  * @version v0.1
