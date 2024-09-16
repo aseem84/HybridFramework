@@ -5,3 +5,5 @@ changes in b.txt by other user
 
 changes in b.txt by gbl-login branch
 
+changes in b.txt by other user in the same file
+
