@@ -1,4 +1,4 @@
-package GBL;
+package gbl_testcases;
 
 import java.time.Duration;
 
